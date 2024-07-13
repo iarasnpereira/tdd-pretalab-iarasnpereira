@@ -34,7 +34,9 @@ describe('Queue', () => {
     const queue = new Queue()
     queue.add(0)
     queue.add(1)
+    expect(queue.size()).toBe(2)
     expect(queue.dequeue()).toEqual(0)
+    expect(queue.size()).toBe(1);
   })
 
   it('Deve retornar "A fila está vazia, não há itens para remover." se a fila estiver vazia ao chamar dequeue', () => {
